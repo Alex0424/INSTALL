@@ -23,21 +23,51 @@ switch_to_root() {
     fi
 }
 
-########################################## NON ROOT INSTALL
+question(){
+    local app="$1" 
+    echo
+    read -p "Do you want to install $app? (y/n): " choice
+    case "$choice" in 
+        y|Y ) 
+            echo "Installing $app..."
+            echo
+            return 0
+            ;;
+        n|N ) 
+            echo "Skipping $app installation."
+            echo
+            return 1
+            ;;
+        * ) 
+            echo
+            echo "Invalid input. Please enter 'y' or 'n'."
+            echo
+            question
+            ;;
+    esac
+}
+
+########################################## NON ROOT APP INSTALL
 
 non_root_install(){
     echo "Running as non-root user: $USER"
-    
-    pip install pipx
+
+    if question "pipx"; then
+        pip install pipx
+    fi
 
 	switch_to_root
 }
 
-########################################## ROOT INSTALL
+########################################## ROOT APP INSTALL
 
 root_install() {
+    echo
     echo "Running as sudoers user: $USER"
 }
+
+########################################## QUESTION
+
 
 switch_to_non_root
 non_root_install
