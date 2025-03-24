@@ -14,7 +14,7 @@ This script is compatible with:
 ✅ **Unix-like systems** (FreeBSD, OpenBSD, etc.)\
 ✅ **Windows Subsystem for Linux (WSL)**\
 ✅ **Git-Bash** (on Windows)\
-✅ **macOS**
+❌ **macOS**
 
 ---
 
@@ -53,7 +53,6 @@ This will initiate the installation process and prompt you for required inputs.
 
 - Ensure you have **sudo/root access** when required.
 - The script **detects the operating system** and applies the correct installation method.
-- If you're on **macOS**, some applications may require **Homebrew (**``**)** instead of `apt` or `dnf`.
 
 ---
 

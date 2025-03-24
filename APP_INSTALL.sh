@@ -26,9 +26,14 @@ question(){
 
 ########################################## APP INSTALL
 
-non_root_install(){
-    echo "Running as non-root user: $USER"
+app_install(){
+    echo "Welcome $USER to the APP INSTALLER! 🚀"
 
+    if question "an update"; then
+	echo updating the machine
+        bash ./update.sh
+    fi
+    
     # List all .sh files in the APPS directory and store them in an array
     apps=($(ls ./APPS/*.sh 2>/dev/null | xargs -n 1 basename | sed 's/\.sh$//'))
 
@@ -52,5 +57,8 @@ non_root_install(){
     done
 }
 
-non_root_install
-echo "$(basename "$0") has completed successfully!"
+app_install
+
+echo "##################################################"
+echo
+echo "DONE: $(basename "$0") has completed successfully! ✅"
