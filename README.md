@@ -25,7 +25,7 @@ This script is compatible with:
 Before running the script, ensure it has execution permissions:
 
 ```bash
-chmod +x NEW_OS_INSTALL.sh
+chmod +x APP_INSTALL.sh
 ```
 
 ### **2️⃣ Run the script**
@@ -33,13 +33,18 @@ chmod +x NEW_OS_INSTALL.sh
 Execute the script with:
 
 ```bash
-./NEW_OS_INSTALL.sh
+./APP_INSTALL.sh
 ```
 
 This will initiate the installation process and prompt you for required inputs.
 
 ---
 
+## 📂 Add Your Own Scripts
+
+You can customize the installation process by adding your own scripts to the `./APPS` directory. Simply place your script files in this folder, and the main script will detect and execute them accordingly.
+
+---
 ## 🔹 **Features**
 
 ✔ **Fast & Automated** – Installs multiple apps in one go.\
