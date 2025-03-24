@@ -49,7 +49,7 @@ You can customize the installation process by adding your own scripts to the `./
 
 ✔ **Fast & Automated** – Installs multiple apps in one go.\
 ✔ **User-Friendly** – Simple prompts for app installation choices.\
-✔ **Multi-Platform** – Works on Linux, macOS, WSL, and more.\
+✔ **Multi-Platform** – Works on Linux, WSL, and more.\
 ✔ **Safe Execution** – Runs necessary parts as root while switching back to a non-root user when required.
 
 ---
